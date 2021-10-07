@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 // import ReactPlayer from 'react-player'
 const myLoader = ({ src, width, quality }) => {
-  return `http://localhost:3000/${src}?w=${width}&q=${quality || 75}`
+  return `https://doczawojweb.vercel.app/${src}?w=${width}&q=${quality || 75}`
 }
 const mvn = () => {
   return (
