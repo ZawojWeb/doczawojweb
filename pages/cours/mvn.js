@@ -67,9 +67,35 @@ const mvn = () => {
               <Image src='maven.png' width={2743} height={868} loader={myLoader} />
             </div>
             <p className='mt-4'>Jak się uda pobrać, i podczas pobierania nie zmienimy zdania i chcemy dalej żyć na tej ziemi to lecimy dalej. Trzeba to coś rozpakować i podpiąć.</p>
+            <h3 className='text-xl mt-16'>Rozpakowanie</h3>
+            <p>Tak w sumie możesz sobie zrobić to jak chcesz byle pamiętać gdzie jest to rozpakowane. Może być nawet w pobranych</p>
+            <video autoPlay loop style={{ width: 'auto', height: 'auto' }}>
+              <source src='/mavenInstall.mp4' />
+            </video>
+            <h3 className='text-xl mt-16'>Teraz trzeba ustawić maven_home i m2_home</h3>
+            <p>Tak w sumie to narazie nie wiem na jaki chuk to ustawiać ale jak się dowiem to zaaktualizuje to. Albo i nie, chuj wie.</p>
+            <video autoPlay loop style={{ width: 'auto', height: 'auto' }}>
+              <source src='/maveHome.mp4' />
+            </video>
+            <h3 className='text-xl mt-16'>No i na koniec dodanie mvn do path</h3>
+            <p>No to już jest w sumie znana procedura, java cpp i każde inne gówno muisz podpiąć. Albo i nie jeśli intalator robi to z automatu.</p>
+            <video autoPlay loop style={{ width: 'auto', height: 'auto' }}>
+              <source src='/path.mp4' />
+            </video>
+          </div>
+        </div>
+        <div className='mx-auto px-4 py-8 max-w-5xl mt20  text-white drop-shadow-2xl'>
+          <div className='bg-gray-800 shadow-2xl rounded-lg mb-6 tracking-wide p-8'>
+            <h2 className='text-3xl mb-8'>I to by było na tyle w tym jakże zajebistym poradniku. Jeżeli ci się podobało to fajnie a jak nie to chuj ci na kurwe. I serio nie obchodzi mnie jeśli ci sie nie podoba.</h2>
+            <p>A i jeszcze nie ma tutaj odp po co komu ten Maven ale w następnym już napisze po co i jak tego używać</p>
           </div>
         </div>
       </div>
+      <Link href='/'>
+        <button type='button' className='max-w-sm w-full m-auto bg-gradient-to-r from-indigo-500 via-pink-500 to-yellow-500 hover:from-indigo-600 hover:via-pink-600 hover:to-red-600 focus:outline-none text-white text-2xl uppercase font-bold shadow-md mx-auto p-5'>
+          <div className='text-center'>Wracam do menu</div>
+        </button>
+      </Link>
     </section>
   )
 }
