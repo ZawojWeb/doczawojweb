@@ -1,8 +1,8 @@
 import axios from 'axios'
 import { useState } from 'react'
 import Image from 'next/image'
-
 const site_url = process.env.SITE_URL || 'http://localhost:3000'
+
 const myLoader = ({ src, width, quality }) => {
   return `${site_url}/${src}?w=${width}&q=${quality || 75}`
 }
