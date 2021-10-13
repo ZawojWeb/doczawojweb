@@ -1,6 +1,6 @@
 import axios from 'axios'
-import { useState } from 'react'
 import Image from 'next/image'
+import { useState } from 'react'
 const site_url = process.env.SITE_URL || 'http://localhost:3000'
 
 const myLoader = ({ src, width, quality }) => {

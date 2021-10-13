@@ -1,5 +1,4 @@
 import Link from 'next/link'
-
 export default function CoursCard({ link, subtext, title, img }) {
   return (
     <div className='max-w-lg mx-auto'>
