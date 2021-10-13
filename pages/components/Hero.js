@@ -1,14 +1,24 @@
+import axios from 'axios'
 import Image from 'next/image'
+import { useState } from 'react'
 
 const site_url = process.env.SITE_URL || 'http://localhost:3000'
-console.log(process.env.SITE_URL)
 const myLoader = ({ src, width, quality }) => {
   return `${site_url}/${src}?w=${width}&q=${quality || 75}`
 }
 
 export default function Hero({ dark, blueText, text, img }) {
+  const [comitData, setComitData] = useState('')
+
+  const handleSubmit = () => {
+    axios.get(`https://api.github.com/repos/zawojweb/doczawojweb/commits`).then((resp) => {
+      let date = new Date(resp.data[0].commit.author.date)
+      let dateMDY = `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()} | ${date.getHours()}:${date.getMinutes()}`
+      setComitData(dateMDY)
+    })
+  }
   return (
-    <div className='w-full mb-96'>
+    <div className='w-full mb-20' onLoad={handleSubmit}>
       <div className='relative bg-white overflow-hidden'>
         <div className='max-w-7xl mx-auto'>
           <div className='relative z-10  bg-white s w-full'>
@@ -18,6 +28,7 @@ export default function Hero({ dark, blueText, text, img }) {
                   <span className='block xl:inline'>{dark}</span> <span className='block text-indigo-600 xl:inline'>{blueText}</span>
                 </h1>
                 <p className='mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0'>{text}</p>
+                <p className=''>Last update: {comitData}</p>
               </div>
               <div className=''>
                 <Image className='h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full ' src={img} width={500} height={500} loader={myLoader} />

@@ -1,24 +1,13 @@
 import Link from 'next/link'
-
+import CoursCard from './coursCard'
 const Coureses = () => {
   return (
-    <section className='grid grid-cols-3 gap-4  '>
-      <div class='max-w-lg mx-auto'>
-        <div class='bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5'>
-          <a href='#'>
-            <img class='rounded-t-lg' src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Apache_Maven_logo.svg/1280px-Apache_Maven_logo.svg.png' alt='' />
-          </a>
-          <div class='p-5'>
-            <a href='#'>
-              <h5 class='text-gray-900 font-bold text-2xl tracking-tight mb-2'>Po co komu maven i jak to coś zainsatlować</h5>
-            </a>
-            <p class='font-normal text-gray-700 mb-3'>Instalacja nie jest trudna</p>
-            <Link href='/cours/mvn'>
-              <a class='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center'>Poradnik</a>
-            </Link>
-          </div>
-        </div>
-      </div>
+    <section className=''>
+      <header className='py-12 text-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:text-center'>
+        <h1 className='mt-2 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl'>Poradniki i kursy na wszelakie tematy.</h1>
+        <h2 className='mt-4 max-w-2xl text-xl lg:mx-auto'>Większości kursy są nie przydatne do życia, ale ułatwią ci przygotowanie do labów lub ćwików.</h2>
+      </header>
+      <CoursCard link='/cours/mvn' title='Po co komu maven i jak to coś zainsatlować' subtext='Instalacja nie jest trudna' img='https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Apache_Maven_logo.svg/1280px-Apache_Maven_logo.svg.png' />
     </section>
   )
 }
