@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const CoursCard = ({ link, subtext, title, img }) => {
+export default function CoursCard({ link, subtext, title, img }) {
   return (
     <div className='max-w-lg mx-auto'>
       <div className='bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5 mx-auto'>

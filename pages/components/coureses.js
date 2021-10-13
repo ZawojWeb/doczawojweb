@@ -1,5 +1,5 @@
-import CoursCard from './courscard'
-const Coureses = () => {
+import CoursCard from './CoursCard'
+export default function Coureses() {
   return (
     <section className=''>
       <header className='py-12 text-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:text-center'>
@@ -10,5 +10,3 @@ const Coureses = () => {
     </section>
   )
 }
-
-export default Coureses
