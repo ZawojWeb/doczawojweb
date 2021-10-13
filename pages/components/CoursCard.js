@@ -22,5 +22,3 @@ export default function CoursCard({ link, subtext, title, img }) {
     </div>
   )
 }
-
-export default CoursCard
