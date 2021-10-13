@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import CoursCard from './CoursCard'
 const Coureses = () => {
   return (
