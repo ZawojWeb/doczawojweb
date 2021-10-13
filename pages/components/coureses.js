@@ -1,4 +1,4 @@
-import CoursCard from './CoursCard'
+import CoursCard from './courscard'
 const Coureses = () => {
   return (
     <section className=''>
