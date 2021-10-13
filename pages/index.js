@@ -1,5 +1,5 @@
-import Hero from 'components/Hero.js'
-import Coureses from 'components/Coureses.js'
+import Hero from 'components/Hero'
+import Coureses from 'components/Coureses'
 
 export default function Home() {
   return (
