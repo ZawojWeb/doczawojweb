@@ -1,4 +1,4 @@
-import CoursCard from 'CoursCard'
+import CoursCard from 'CoursCard.js'
 export default function Coureses() {
   return (
     <section className=''>
