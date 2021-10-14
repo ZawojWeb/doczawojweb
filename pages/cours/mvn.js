@@ -1,5 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import BackButton from '../components/BackButton'
+import BigText from '../components/BigText'
+import Summary from '../components/Summary'
 // import ReactPlayer from 'react-player'
 const myLoader = ({ src, width, quality }) => {
   return `https://doczawojweb.vercel.app/${src}?w=${width}&q=${quality || 75}`
@@ -8,13 +11,9 @@ const mvn = () => {
   return (
     <section className='bg-gray-800 min-h-screen'>
       <div className='container mx-auto px-4'>
-        <Link href='/'>
-          <button type='button' className='max-w-sm w-full m-auto bg-gradient-to-r from-indigo-500 via-pink-500 to-yellow-500 hover:from-indigo-600 hover:via-pink-600 hover:to-red-600 focus:outline-none text-white text-2xl uppercase font-bold shadow-md mx-auto p-5'>
-            <div className='text-center'>Nie chce już tego kursu</div>
-          </button>
-        </Link>
+        <BackButton btntext='Nie che już tego kursu' />
+        <BigText text='Maven in 5 min' />
 
-        <h1 className='text-7xl text-white mt-20 text-center'>MAVEN IN 5 min</h1>
         <div className='mx-auto px-4 py-8 max-w-5xl mt20  text-white drop-shadow-2xl'>
           <div className='bg-gray-800 shadow-2xl rounded-lg mb-6 tracking-wide p-8'>
             {/* Template section */}
@@ -84,18 +83,9 @@ const mvn = () => {
             </video>
           </div>
         </div>
-        <div className='mx-auto px-4 py-8 max-w-5xl mt20  text-white drop-shadow-2xl'>
-          <div className='bg-gray-800 shadow-2xl rounded-lg mb-6 tracking-wide p-8'>
-            <h2 className='text-3xl mb-8'>I to by było na tyle w tym jakże zajebistym poradniku. Jeżeli ci się podobało to fajnie a jak nie to chuj ci na kurwe. I serio nie obchodzi mnie jeśli ci sie nie podoba.</h2>
-            <p>A i jeszcze nie ma tutaj odp po co komu ten Maven ale w następnym już napisze po co i jak tego używać</p>
-          </div>
-        </div>
+        <Summary title='I to by było na tyle w tym jakże zajebistym poradniku. Jeżeli ci się podobało to fajnie a jak nie to chuj ci na kurwe. I serio nie obchodzi mnie jeśli ci sie nie podoba.' text='A i jeszcze nie ma tutaj odp po co komu ten Maven ale w następnym już napisze po co i jak tego używać' />
       </div>
-      <Link href='/'>
-        <button type='button' className='max-w-sm w-full m-auto bg-gradient-to-r from-indigo-500 via-pink-500 to-yellow-500 hover:from-indigo-600 hover:via-pink-600 hover:to-red-600 focus:outline-none text-white text-2xl uppercase font-bold shadow-md mx-auto p-5'>
-          <div className='text-center'>Wracam do menu</div>
-        </button>
-      </Link>
+      <BackButton btntext='Wracam do menu' />
     </section>
   )
 }
