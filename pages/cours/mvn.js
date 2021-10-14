@@ -72,7 +72,7 @@ const mvn = () => {
             <video autoPlay loop style={{ width: 'auto', height: 'auto' }}>
               <source src='/mavenInstall.mp4' />
             </video>
-            <h3 className='text-xl mt-16'>Teraz trzeba ustawić maven_home i m2_home</h3>
+            <h3 className='text-xl mt-16'>Teraz trzeba ustawić maven_home i h2_home</h3>
             <p>Tak w sumie to narazie nie wiem na jaki chuk to ustawiać ale jak się dowiem to zaaktualizuje to. Albo i nie, chuj wie.</p>
             <video autoPlay loop style={{ width: 'auto', height: 'auto' }}>
               <source src='/maveHome.mp4' />
