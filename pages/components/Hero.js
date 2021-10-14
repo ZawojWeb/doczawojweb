@@ -13,7 +13,7 @@ export default function Hero({ dark, blueText, text, img }) {
   const handleSubmit = () => {
     axios.get(`https://api.github.com/repos/zawojweb/doczawojweb/commits`).then((resp) => {
       let date = new Date(resp.data[0].commit.author.date)
-      let dateMDY = `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()} | ${date.getHours()}:${date.getMinutes()}`
+      let dateMDY = `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()} | ${date.getHours()}:${date.getMinutes() > 9 ? date.getMinutes() : "0" + date.getMinutes() }`
       setComitData(dateMDY)
     })
   }
