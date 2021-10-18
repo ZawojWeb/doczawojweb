@@ -1,6 +1,6 @@
-const UrlLink = ({ content }) => {
+const UrlLink = ({ content,link }) => {
   return (
-    <a className='text-pink-500' href='https://www.oracle.com/java/technologies/downloads/'>
+    <a className='text-pink-500' href={link}>
       {content}
     </a>
   )
